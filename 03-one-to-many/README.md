@@ -8,9 +8,9 @@ they're his.
 Now tweet ownership exists in only one place: a single source
 of truth. Without the array there's no conflict of truths.
 
-![single-source-of-truth.png](single source of truth)
+![single source of truth](./single-source-of-truth.png)
 
 ### One-to-Many
 A user may have many tweets. Each tweet has just one user.
 
-![one-to-many-diagram.png](one to many)
+![one to many](./one-to-many-diagram.png)
