@@ -12,3 +12,4 @@ good at picking off specific parts of elements in an array.
 ![](./01-one-to-many-vs-many-to-many.png)
 ![](./02-has-many-through.png)
 ![](./03-tally-mosting.png)
+![](./04-relationship-spreadsheet.png)
