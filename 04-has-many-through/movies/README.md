@@ -7,3 +7,8 @@ matches and manually shovelled the property we wanted in to the results array.
 good at picking off specific parts of elements in an array.
 
 ![manually picking off properties](./manual_property_picking.png)
+
+### Other
+![](./01-one-to-many-vs-many-to-many.png)
+![](./02-has-many-through.png)
+![](./03-tally-mosting.png)
