@@ -6,4 +6,4 @@ matches and manually shovelled the property we wanted in to the results array.
 `.select` is good at picking entire array elements out of an array. It is not
 good at picking off specific parts of elements in an array.
 
-!(manually picking off properties)[manual_property_picking.png]
+![manually picking off properties](./manual_property_picking.png)
