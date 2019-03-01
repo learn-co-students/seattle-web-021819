@@ -8,4 +8,8 @@ ActiveRecord::Base.establish_connection(
   
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.irregular 'qqqzzz', 'geluso'
+end
+
 require_all 'lib'
