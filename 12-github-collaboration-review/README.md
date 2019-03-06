@@ -123,9 +123,9 @@ Because Erin's changes are the ones that conflict with master, Erin needs to res
    ```
    - This means that since master was last pulled, two different commits have made changes to the same line.  One of them (Erin's) was "by Erin and Soundarya", which is between the "<<<<<<< HEAD" and "=======".  The other one (Soundarya's) was "authors : Erin and Soundarya :)", which is between the "=======" and the ">>>>>>> 9960c6e102ffb03e65bd9eeb3d24863e12baa034".
    - Erin has three different options here:
-     a) Accept Soundarya's version.  To do that, she would erase the git markup ("<<<<<<< HEAD", "=======", and "">>>>>>> 9960c6e102ffb03e65bd9eeb3d24863e12baa034") and erase the line she added ("by Erin and Soundarya")
-     b) Overwrite Soundarya's version with her version.  To do that, she should erase the git markup ("<<<<<<< HEAD", "=======", and "">>>>>>> 9960c6e102ffb03e65bd9eeb3d24863e12baa034") and erase the line Soundarya added ("authors : Erin and Soundarya :)")
-     c) Make some new version.  One example of that would be combining both "by Erin and Soundarya" and "authors : Erin and Soundarya :)" into a single line.  She would still need to erase the git markup ("<<<<<<< HEAD", "=======", and "">>>>>>> 9960c6e102ffb03e65bd9eeb3d24863e12baa034") as well.
+     - **a) Accept Soundarya's version**.  To do that, she would erase the git markup ("<<<<<<< HEAD", "=======", and "">>>>>>> 9960c6e102ffb03e65bd9eeb3d24863e12baa034") and erase the line she added ("by Erin and Soundarya")
+     - **b) Overwrite Soundarya's version with her version**.  To do that, she should erase the git markup ("<<<<<<< HEAD", "=======", and "">>>>>>> 9960c6e102ffb03e65bd9eeb3d24863e12baa034") and erase the line Soundarya added ("authors : Erin and Soundarya :)")
+     - **c) Make some new version**.  One example of that would be combining both "by Erin and Soundarya" and "authors : Erin and Soundarya :)" into a single line.  She would still need to erase the git markup ("<<<<<<< HEAD", "=======", and "">>>>>>> 9960c6e102ffb03e65bd9eeb3d24863e12baa034") as well.
    - Erin chooses option (c) and combines the two lines into one, then saves the file
 5. `git add README.md`
 6. `git status`
