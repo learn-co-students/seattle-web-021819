@@ -7,3 +7,6 @@
 - Discuss ERB Template
 - Practice file structure in Sinatra
 - Identify the connection between REST and CRUD
+
+# Deliverables
+- make an web interface for CRUD actions for one resource
