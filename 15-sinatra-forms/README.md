@@ -7,6 +7,12 @@
 - write form templates in HTML with ERB
 - build params hash from forms
 
+# REST
+- REpresentational State Transfer
+
+# To make information accesible to the view
+- declare variables with `@`
+
 ## Create
 
 ## Read
