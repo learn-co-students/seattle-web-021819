@@ -2,10 +2,11 @@
 
 
 <form action="/books" method="post">
-  <label for="author">
-    Author
-  </label>
-  <input type="text" name="author" value="" placeholder='author'>
+  <select name="author_id">
+    <% Author.all.each do |a| %>
+      <option value="<%= a.id %>"><%= a.name %></option>
+    <% end %>
+  </select>
   <label for="title">
     Title
   </label>

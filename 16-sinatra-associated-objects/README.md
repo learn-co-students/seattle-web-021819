@@ -1,17 +1,34 @@
-# Deliverables
 
+# Deliverables
   As a site visitor,
    - I should be able to see a list of books
    - I should be able to click on each book title to see more information about that book
    - I should be able to see a list of authors
-   - I should see a link on index page to each show page
    - I should be able to associate a book with an existing author when I create it
+
+# Steps Towards Multiple Resources
+  - create migrations
+    - add authors table
+    - remove author name and add author id to books
+  - create relationships between models
+    - authors hm books
+    - books bt author
+  - separate controller files
+    - tell config.ru about new controller
+  - create views directory for each resource
+    - tell each controller about views directory
+  - add dropdowns to your forms to connect with other resources
+    - structure your params in the best way to sue the data
+
+
+# Stretch
+  - from book page, go to author
+  - on author page, see all books
 
 # Discuss
 - does this affect the schema?
 - what new routes might I need?
 - what updates might I need to existing views
-
 
 ## REST
 - REpresentational State Transfer
@@ -39,4 +56,11 @@
 - PATCH, '/books/:id', redirect
 
 ### Destroy
+GET?
 - DELETE, '/books/:id'
+
+
+
+
+
+
