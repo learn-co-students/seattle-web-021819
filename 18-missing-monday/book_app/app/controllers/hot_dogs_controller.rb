@@ -1,0 +1,2 @@
+class HotDogsController < ApplicationController
+end

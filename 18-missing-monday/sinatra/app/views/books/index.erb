@@ -1,0 +1,11 @@
+<h1>All the Books</h1>
+
+<ul>
+  <% Book.all.each do |book| %>
+    <li>
+      <a href="books/<%= book.id %>">
+        <%= book.title %> - <%= book.author.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>

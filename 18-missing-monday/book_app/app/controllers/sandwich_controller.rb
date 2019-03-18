@@ -1,0 +1,2 @@
+class SandwichController < ApplicationController
+end
