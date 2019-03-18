@@ -1,0 +1,16 @@
+<h1>Here One Burg</h1>
+
+<h4>
+  <%= @burger.name %>
+</h4>
+<p>
+  $<%= @burger.price %>
+</p>
+<p>
+  <% if @burger.meat %>
+    Has meat
+  <% else %>
+    No meat
+  <% end %>
+</p>
+

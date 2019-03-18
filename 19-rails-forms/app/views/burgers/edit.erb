@@ -1,0 +1,19 @@
+<h1>Edit A Burg</h1>
+
+<%= form_for(@burger) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :price %>
+  <%= f.number_field :price, {step: '.01'} %>
+  <%= f.label :meat_true, "Meat" %>
+  <%= f.radio_button :meat, true %>
+  <%= f.label :meat_false, "Veggie" %>
+  <%= f.radio_button :meat, false %>
+  <%= f.submit %>
+<% end %>
+
+
+
+
+
+
