@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_15_220748) do
+ActiveRecord::Schema.define(version: 2019_03_19_181505) do
 
   create_table "burgers", force: :cascade do |t|
     t.boolean "meat"
@@ -18,12 +18,11 @@ ActiveRecord::Schema.define(version: 2019_03_15_220748) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "restaurant_id"
   end
 
-  create_table "fries", force: :cascade do |t|
-    t.integer "saltiness"
-    t.boolean "sweet_potato"
-    t.boolean "curly"
+  create_table "restaurants", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

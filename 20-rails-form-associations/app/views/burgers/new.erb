@@ -9,6 +9,7 @@
   <%= f.radio_button :meat, true %>
   <%= f.label :meat_false, "Veggie" %>
   <%= f.radio_button :meat, false %>
+  <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name  %>
   <%= f.submit %>
 <% end %>
 

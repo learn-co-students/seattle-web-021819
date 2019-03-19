@@ -1,2 +1,0 @@
-module FriesHelper
-end

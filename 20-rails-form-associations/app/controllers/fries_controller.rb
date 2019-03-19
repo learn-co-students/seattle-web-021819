@@ -1,2 +1,0 @@
-class FriesController < ApplicationController
-end
