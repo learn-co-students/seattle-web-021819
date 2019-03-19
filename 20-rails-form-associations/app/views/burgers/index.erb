@@ -1,0 +1,20 @@
+<h1>Here some Burgs</h1>
+<ul>
+  <% @burgers.each do |burger| %>
+    <li>
+      <h4>
+        <%= burger.name %>
+      </h4>
+      <p>
+        $<%= burger.price %>
+      </p>
+      <p>
+        <% if burger.meat %>
+          Has meat
+        <% else %>
+          No meat
+        <% end %>
+      </p>
+    </li>
+  <% end %>
+</ul>
