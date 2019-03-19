@@ -12,6 +12,10 @@
   <%= f.submit %>
 <% end %>
 
+<%= form_tag(@burger, {method: 'delete'}) do %>
+  <%= submit_tag 'Delete' %>
+<% end %>
+
 
 
 
