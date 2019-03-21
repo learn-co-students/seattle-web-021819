@@ -1,5 +1,5 @@
 class BurgersController < ApplicationController
-  before_action :set_burger, only: [:show, :edit, :update]
+  before_action :set_burger, only: [:show, :edit, :update, :destroy]
 
 
   def index
@@ -27,6 +27,11 @@ class BurgersController < ApplicationController
   def update
     @burger.update(burger_params)
     redirect_to @burger
+  end
+
+  def destroy
+    @burger.destroy
+    redirect_to burgers_path
   end
 
   private
