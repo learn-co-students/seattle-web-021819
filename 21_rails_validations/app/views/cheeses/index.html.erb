@@ -1,0 +1,7 @@
+<h1>All your finest Cheese</h1>
+
+<% @cheeses.each do |cheese| %>
+  <p>
+    <%= link_to cheese.name, cheese %>
+  </p>
+<% end %>

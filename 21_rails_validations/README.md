@@ -1,0 +1,6 @@
+- delete with link_to
+- form_for / form_tag + validations
+- collection select parameters
+  - radios
+  - div-list
+- has many through with a collection
