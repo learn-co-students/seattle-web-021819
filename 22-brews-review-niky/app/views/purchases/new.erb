@@ -1,0 +1,22 @@
+<h1>New Purchase</h1>
+
+
+<% if @purchase.errors.any? %>
+  You had some errors!
+  <ul>
+    <% @purchase.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for(@purchase) do |f| %>
+  <%= f.label :customer_name %>
+  <%= f.text_field :customer_name %>
+  <%= f.label :price %>
+  <%= f.number_field :price, {step: '.01'} %>
+  <%= f.collection_select :brew_id, Brew.all, :id, :blend_name %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Go Back to All Brews', brews_path %>

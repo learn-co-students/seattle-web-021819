@@ -1,0 +1,31 @@
+<h1>Show Coffee</h1>
+<h2>
+  <%= @brew.blend_name %>
+</h2>
+
+<%= flash[:message] %>
+
+<p>
+  Origin: <%= @brew.origin %>
+</p>
+<p>
+  Notes: <%= @brew.notes %>
+</p>
+<p>
+  Strength: <%= @brew.strength %>
+</p>
+
+
+<h2>Buy a Brew</h2>
+
+<%= form_for(@purchase) do |f| %>
+  <%= f.label :customer_name %>
+  <%= f.text_field :customer_name %>
+  <%= f.label :price %>
+  <%= f.number_field :price, {step: '.01'} %>
+  <%= f.hidden_field :brew_id, {value: @brew.id} %>
+  <%= f.submit %>
+<% end %>
+
+<%= button_to 'Index', brews_path, {method: :get, params: {word: 'howdy'}} %>
+<%= link_to 'Edit', edit_brew_path %>

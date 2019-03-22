@@ -1,0 +1,24 @@
+<h1>Edit New Coffee</h1>
+
+<% if @brew.errors.any? %>
+  You had some errors!
+  <ul>
+    <% @brew.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for(@brew) do |f| %>
+  <%= f.label :blend_name %>
+  <%= f.text_field :blend_name %>
+  <%= f.label :origin %>
+  <%= f.text_field :origin %>
+  <%= f.label :notes %>
+  <%= f.text_field :notes %>
+  <%= f.label :strength %>
+  <%= f.number_field :strength %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Go Back to All Brews', brews_path %>
