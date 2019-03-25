@@ -1,0 +1,14 @@
+<h1>Votes Remaining: <%= @votes %></h1>
+
+<ul class="colors">
+  <% @colors.each do |color| %>
+  <li class="color" style="background-color: #<%= color.hex %>;">
+    #<%= color.hex %>
+    <span class="votes">Votes: <%= color.votes.length %>
+      <%= form_for [color, Vote.new] do |f| %>
+      <button type="submit" class="vote">✅</button>
+      <% end %>
+    </span>
+  </li>
+  <% end %>
+</ul>
