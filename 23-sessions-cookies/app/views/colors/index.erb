@@ -6,7 +6,13 @@
     #<%= color.hex %>
     <span class="votes">Votes: <%= color.votes.length %>
       <%= form_for [color, Vote.new] do |f| %>
-      <button type="submit" class="vote">✅</button>
+      <button type="submit" class="vote">
+        <% if can_vote? %>
+          ✅
+        <% else %>
+          🙅‍♀️
+        <% end %>
+      </button>
       <% end %>
     </span>
   </li>

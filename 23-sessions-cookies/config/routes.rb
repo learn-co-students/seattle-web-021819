@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :colors, only: [:index] do
     resources :votes, only: [:create]
   end
+  # post colors/:color_id/votes
 
   root :to => redirect('/colors')
 end

@@ -1,8 +1,16 @@
 class ColorsController < ApplicationController
 
   def index
-    @votes = 5
+    # if cookies[:votes]
+    #   @votes = cookies[:votes]
+    # else
+    #   cookies[:votes] = 5
+    # end
+    set_votes
+
+    @votes = vote_count
     @colors = Color.includes(:votes).all
+    render :index
   end
 
 end
