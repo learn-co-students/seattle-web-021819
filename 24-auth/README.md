@@ -18,8 +18,39 @@
 
 ## Auths
 - authentication
+  - verify that a user is who they say they are
+  - username and password
 - authorization
+  - can i do this thing
+  - do i have permission to see this
+  - redirect if user isn't authorized
 
 
 ## Steps
+- create a user model
+  - username
+- /login => post
+  - form to login
+- logout?
+- users/new => post /users
+
+
+# Login
+  - login path
+  - sessions new/create
+  - form_tag
+  - if user is found, proceed
+  - if no user, send error message back to form
+
+# Logout
+  - path
+  - clear the session
+
+
+
+
+
+
+
+
 

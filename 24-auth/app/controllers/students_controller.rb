@@ -1,4 +1,6 @@
 class StudentsController < ApplicationController
+  skip_before_action :authenticate_user, only: [:index]
+
 
   def index
     @students = Student.all
@@ -24,6 +26,8 @@ class StudentsController < ApplicationController
   end
 
   private
+
+
   def student_params
     params.require(:student).permit(:name, :email, :cohort_id)
   end
