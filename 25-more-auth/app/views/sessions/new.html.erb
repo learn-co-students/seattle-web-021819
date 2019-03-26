@@ -1,0 +1,11 @@
+<% if flash[:message] %>
+  <%= flash[:message] %>
+<% end %>
+
+<%= form_tag login_path, {class: 'ui form'} do %>
+  <%= label_tag :username %>
+  <div class="field">
+    <%= text_field_tag :username %>
+  </div>
+  <%= submit_tag 'Login', {class: 'ui medium pink button inverted'} %>
+<% end %>
