@@ -28,8 +28,15 @@ const todoItems = document.getElementById('todo-items')
 todoForm.addEventListener('submit', (ev) => {
   ev.preventDefault()
 
+  // innerHTML is evil! users can inject HTML/CSS/JS
+  // innerHTML is left here in this code so you can expirement
+  // try entering this into the input:
+  // <img src="x" onerror="alert('evil')">
+  //
+  // best practice is to use something like textContent
+  // li.textContent = todoItem.value
   const li = document.createElement('li')
-  li.innerText = todoItem.value
+  li.innerHTML = todoItem.value
 
   // open mystery: WHERE WAS priority ASSIGNED?!
   console.log('pri', priority.value);
