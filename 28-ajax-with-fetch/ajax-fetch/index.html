@@ -1,0 +1,21 @@
+<script defer src="main.js"></script>
+
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
+
+<h1>People</h1>
+<button id="refresh">Refresh</button>
+
+<div>
+  <form id="filter-form">
+    <input id="filter" type="text" />
+    <input type="submit" value="filter" />
+  </form>
+</div>
+
+<p id="loading" class="hidden">Loading...</p>
+<p id="no-results" class="hidden">No results.</p>
+<ul id="peoples"></ul>
