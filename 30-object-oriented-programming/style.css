@@ -1,0 +1,33 @@
+body {
+  background-color: green;
+}
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}
+
+.card {
+  width: 60px;
+  height: 100px;
+  background-color: white;
+  border: solid black 1px;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bot-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
