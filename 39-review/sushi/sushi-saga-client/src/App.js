@@ -6,6 +6,21 @@ import Table from './containers/Table';
 const API = "http://localhost:3000/sushis"
 
 class App extends Component {
+  constructor() {
+    this.state = {
+      sushis: []
+    }
+
+    this.loadData()
+  }
+
+  loadData() {
+
+  }
+
+  eatSushi(sushi) {
+    console.log('eat', {sushi})
+  }
 
   render() {
     return (

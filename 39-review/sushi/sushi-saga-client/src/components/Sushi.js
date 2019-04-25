@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 
 const Sushi = (props) => {
+  let {imgUrl, name, price} = props.sushi
   return (
     <div className="sushi">
       <div className="plate" 
@@ -10,11 +11,11 @@ const Sushi = (props) => {
           true ?
             null
           :
-            <img src={/* Give me an image source! */} width="100%" />
+            <img src={imgUrl} width="100%" />
         }
       </div>
       <h4 className="sushi-details">
-        {/* Give me a name! */} - ${/* Give me a price! */}
+        {name} - ${price}
       </h4>
     </div>
   )
