@@ -26,10 +26,7 @@ class App extends Component {
 
   handleEditClick(pizza) {
     console.log('edit click', pizza)
-    this.setState({pizza}, (newState) => {
-      console.log('new state', this.state)
-      console.log({newState})
-    })
+    this.setState({pizza})
   }
 
   handleUpdatePizza(newPizza) {
@@ -45,13 +42,22 @@ class App extends Component {
   }
 
   savePizza(newPizza) {
-    fetch()
+    fetch(URL + '/' + newPizza.id, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newPizza)
+    })
+    .then(res => res.json())
+    .then(json => {
+      console.log('db done')
+    })
   }
 
   render() {
     return (
       <Fragment>
-        num pizzas: {this.state.pizzas.length}
         <Header/>
         <PizzaForm pizza={this.state.pizza} handleUpdatePizza={this.handleUpdatePizza} />
         <PizzaList
