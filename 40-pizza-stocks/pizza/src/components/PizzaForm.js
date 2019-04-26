@@ -16,13 +16,29 @@ class PizzaForm extends Component {
     this.handleVegChange = this.handleVegChange.bind(this)
   }
 
-  componentWillReceiveProps(props) {
-    this.setState({
-      idValue: props.pizza.id,
-      toppingValue: props.pizza.topping,
-      sizeValue: props.pizza.size,
-      vegetarianValue: props.pizza.vegetarian,
-    })
+  // Deprecated. We're using getDerivedStateFromProps now
+  // https://hackernoon.com/replacing-componentwillreceiveprops-with-getderivedstatefromprops-c3956f7ce607
+  // componentWillReceiveProps(props) {
+  //   this.setState({
+  //     idValue: props.pizza.id,
+  //     toppingValue: props.pizza.topping,
+  //     sizeValue: props.pizza.size,
+  //     vegetarianValue: props.pizza.vegetarian,
+  //   })
+  // }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.pizza.id === prevState.idValue) {
+      console.log('getDerived null')
+      return null
+    }
+    console.log('getDerived new {}')
+    return {
+      idValue: nextProps.pizza.id,
+      toppingValue: nextProps.pizza.topping,
+      sizeValue: nextProps.pizza.size,
+      vegetarianValue: nextProps.pizza.vegetarian,
+    }
   }
 
   handleUpdatePizza() {
@@ -43,7 +59,11 @@ class PizzaForm extends Component {
   }
 
   handleVegChange(ev) {
-    this.setState({vegetarianValue: ev.target.value})
+    if (ev.target.value === 'Vegetarian') {
+      this.setState({vegetarianValue: true})
+    } else {
+      this.setState({vegetarianValue: false})
+    }
   }
 
   render() {
